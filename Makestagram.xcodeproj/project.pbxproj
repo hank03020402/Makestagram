@@ -16,6 +16,9 @@
 		368628581F26E333005BE3E4 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368628571F26E333005BE3E4 /* PostHeaderCell.swift */; };
 		3686285B1F26E749005BE3E4 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686285A1F26E749005BE3E4 /* PostActionCell.swift */; };
 		368628691F26EE8E005BE3E4 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368628681F26EE8E005BE3E4 /* LikeService.swift */; };
+		3686286B1F2729B1005BE3E4 /* FollowerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686286A1F2729B1005BE3E4 /* FollowerService.swift */; };
+		3686286D1F272DBF005BE3E4 /* FindFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3686286C1F272DBF005BE3E4 /* FindFriends.storyboard */; };
+		3686286F1F272E6E005BE3E4 /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686286E1F272E6E005BE3E4 /* FindFriendsCell.swift */; };
 		36AFE50F1F21892A007B66A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AFE50E1F21892A007B66A7 /* AppDelegate.swift */; };
 		36AFE5161F21892A007B66A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36AFE5151F21892A007B66A7 /* Assets.xcassets */; };
 		36C720D11F2195A700BBF4CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C720CF1F2195A700BBF4CA /* LaunchScreen.storyboard */; };
@@ -135,6 +138,9 @@
 		368628571F26E333005BE3E4 /* PostHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostHeaderCell.swift; path = Makestagram/PostHeaderCell.swift; sourceTree = "<group>"; };
 		3686285A1F26E749005BE3E4 /* PostActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostActionCell.swift; sourceTree = "<group>"; };
 		368628681F26EE8E005BE3E4 /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
+		3686286A1F2729B1005BE3E4 /* FollowerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowerService.swift; sourceTree = "<group>"; };
+		3686286C1F272DBF005BE3E4 /* FindFriends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FindFriends.storyboard; path = Storyboards/FindFriends.storyboard; sourceTree = "<group>"; };
+		3686286E1F272E6E005BE3E4 /* FindFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFriendsCell.swift; sourceTree = "<group>"; };
 		36AFE50B1F21892A007B66A7 /* Makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AFE50E1F21892A007B66A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36AFE5151F21892A007B66A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				36D3A1141F25CAB20001839E /* StorageReference+Post.swift */,
 			);
 			name = Extensions;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3686282F1F26DE0A005BE3E4 /* Products */ = {
@@ -203,13 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				3686282E1F26DE0A005BE3E4 /* Kingfisher.xcodeproj */,
-				3679FADA1F24965E007550E2 /* Extensions */,
-				36C720E71F21DB7A00BBF4CA /* Services */,
-				36C720E11F21CE5000BBF4CA /* Models */,
 				36AFE50D1F21892A007B66A7 /* Makestagram */,
-				36AFE50C1F21892A007B66A7 /* Products */,
-				9C484239527B9CEB48599C48 /* Pods */,
-				53044C3BD796D1E26E9B2C49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,11 +220,18 @@
 				36AFE50B1F21892A007B66A7 /* Makestagram.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		36AFE50D1F21892A007B66A7 /* Makestagram */ = {
 			isa = PBXGroup;
 			children = (
+				3679FADA1F24965E007550E2 /* Extensions */,
+				36C720E71F21DB7A00BBF4CA /* Services */,
+				36C720E11F21CE5000BBF4CA /* Models */,
+				36AFE50C1F21892A007B66A7 /* Products */,
+				9C484239527B9CEB48599C48 /* Pods */,
+				53044C3BD796D1E26E9B2C49 /* Frameworks */,
 				36AFE50E1F21892A007B66A7 /* AppDelegate.swift */,
 				36C720D91F21969700BBF4CA /* Supporting Files */,
 				36C720DA1F2196AB00BBF4CA /* ViewControllers */,
@@ -261,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				36C720D01F2195A700BBF4CA /* Main.storyboard */,
+				3686286C1F272DBF005BE3E4 /* FindFriends.storyboard */,
 				36D3A1181F25D0620001839E /* Home.storyboard */,
 				36C720DC1F21978F00BBF4CA /* Login.storyboard */,
 			);
@@ -274,8 +283,10 @@
 				3686282C1F25EAE8005BE3E4 /* PostImageCell.swift */,
 				368628571F26E333005BE3E4 /* PostHeaderCell.swift */,
 				3686285A1F26E749005BE3E4 /* PostActionCell.swift */,
+				3686286E1F272E6E005BE3E4 /* FindFriendsCell.swift */,
 			);
 			name = Models;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		36C720E71F21DB7A00BBF4CA /* Services */ = {
@@ -286,8 +297,10 @@
 				36E741D01F25BDEA0073298E /* PostService.swift */,
 				36D3A1101F25C20D0001839E /* Post.swift */,
 				368628681F26EE8E005BE3E4 /* LikeService.swift */,
+				3686286A1F2729B1005BE3E4 /* FollowerService.swift */,
 			);
 			name = Services;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		53044C3BD796D1E26E9B2C49 /* Frameworks */ = {
@@ -296,6 +309,7 @@
 				301DF48BDFB6F2CA28D47C03 /* Pods_Makestagram.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9C484239527B9CEB48599C48 /* Pods */ = {
@@ -305,6 +319,7 @@
 				C936EC732B4E32F1490217F9 /* Pods-Makestagram.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +481,7 @@
 				36C720DD1F21978F00BBF4CA /* Login.storyboard in Resources */,
 				36C720D21F2195A700BBF4CA /* Main.storyboard in Resources */,
 				36C720D61F2195BE00BBF4CA /* GoogleService-Info.plist in Resources */,
+				3686286D1F272DBF005BE3E4 /* FindFriends.storyboard in Resources */,
 				36D3A1191F25D0620001839E /* Home.storyboard in Resources */,
 				36AFE5161F21892A007B66A7 /* Assets.xcassets in Resources */,
 				36C720D11F2195A700BBF4CA /* LaunchScreen.storyboard in Resources */,
@@ -537,6 +553,7 @@
 				36D3A1111F25C20D0001839E /* Post.swift in Sources */,
 				3686282D1F25EAE8005BE3E4 /* PostImageCell.swift in Sources */,
 				36D3A1131F25CA190001839E /* UIImage+Size.swift in Sources */,
+				3686286F1F272E6E005BE3E4 /* FindFriendsCell.swift in Sources */,
 				3679FADC1F24A55B007550E2 /* HomeViewController.swift in Sources */,
 				36E741CD1F2597AE0073298E /* MGPhotoHelper.swift in Sources */,
 				3679FAD71F249524007550E2 /* Constants.swift in Sources */,
@@ -547,6 +564,7 @@
 				36AFE50F1F21892A007B66A7 /* AppDelegate.swift in Sources */,
 				368628581F26E333005BE3E4 /* PostHeaderCell.swift in Sources */,
 				3679FAD91F249657007550E2 /* Storyboards+Utility.swift in Sources */,
+				3686286B1F2729B1005BE3E4 /* FollowerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

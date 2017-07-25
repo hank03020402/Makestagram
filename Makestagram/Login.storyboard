@@ -147,7 +147,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="usernameTextField" destination="WUi-Qu-QCz" id="dBw-bh-saq"/>
+                        <outlet property="usernameTextField" destination="a3f-nh-sHd" id="sWM-Rq-DW9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gxc-Bb-yBp" userLabel="First Responder" sceneMemberID="firstResponder"/>

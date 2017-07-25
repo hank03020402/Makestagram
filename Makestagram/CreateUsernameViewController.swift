@@ -23,18 +23,21 @@ class CreatUsernameViewController :UIViewController{
     @IBAction func NextButton(_ sender: Any) {
         guard let firUser = Auth.auth().currentUser,
             let username = usernameTextField.text,
-            !username.isEmpty else { return }
+            !username.isEmpty else { return } //bug
+        
         UserService.create(firUser, username: username) { (user) in
             guard let user = user else {
                 // handle error
                 return
             }
             
-            User.setCurrent(user, writeToUserDefaults: true)
+            User.setCurrent(user)
             
-            let initialViewController = UIStoryboard.initialViewController(for: .main)
-            self.view.window?.rootViewController = initialViewController
-            self.view.window?.makeKeyAndVisible()
-        }
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            if let initialViewController = storyboard.instantiateInitialViewController() {
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            }
+}
 }
 }
