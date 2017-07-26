@@ -18,12 +18,27 @@ class HomeViewController : UIViewController {
         tableView.tableFooterView = UIView()
         // remove separators from cells
         tableView.separatorStyle = .none
+        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        UserService.posts(for: User.current) { (posts) in
+        reloadTimeline()
+        UserService.timeline { (posts) in
             self.posts = posts
+            self.tableView.reloadData()
+        }
+    }
+    let refreshControl = UIRefreshControl()
+    func reloadTimeline() {
+        UserService.timeline { (posts) in
+            self.posts = posts
+            
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+            
             self.tableView.reloadData()
         }
     }
@@ -50,7 +65,7 @@ extension HomeViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostHeaderCell") as! PostHeaderCell
-            cell.UsernameLabel.text = User.current.username
+            cell.UsernameLabel.text = post.poster.username
             
             return cell
             

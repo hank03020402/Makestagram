@@ -8,7 +8,11 @@
 
 import Foundation
 import UIKit
+protocol FindFriendsCellDelegate: class {
+    func didTapFollowButton(_ followButton: UIButton, on cell: FindFriendsCell)
+}
 class FindFriendsCell: UITableViewCell{
+    weak var delegate :FindFriendsCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         followTapped.layer.borderColor = UIColor.lightGray.cgColor
@@ -21,7 +25,8 @@ class FindFriendsCell: UITableViewCell{
     }
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var followTapped: UIButton!
-    @IBAction func followTapped(_ sender: Any) {
+    @IBAction func followTapped(_ sender: UIButton) {
+         delegate?.didTapFollowButton(sender, on: self)
     }
     
 }
